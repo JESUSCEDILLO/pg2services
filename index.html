@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+       <!-- https://bootswatch.com/journal/      -->
+        <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+
+
+
+             
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <title>Existencias en Saz (ERP PG2)</title>
+<link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+
+<!--        
+'   Convert Excel to JSON with Javascript       ....                  
+  https://www.youtube.com/watch?v=9hVO9-sSOVM   
+
+       https://github.com/SheetJS/js-xlsx
+           
+       https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70
+ -->
+ 
+
+       <div id="main-contenedor" class="container p-4">
+
+              <div class="row">
+                     <div class="col-md-4 mx-auto text-center">
+
+                            <!--      .card*2  -->
+
+
+                            <div class="card">          <!--la primera tarjeta será para mostrar la información -->
+
+                                   <div class="card-body">
+
+                                          <div id="header-logo" >
+                                                 <a href="http://www.carlorossetti.com.mx/" title="Carlo Rossetti">
+                                                        <img src="https://www.carlorossetti.com.mx/img/carlo-rossetti-logo-1518642911.jpg" alt="Carlo Rossetti" width="250">
+                                                 </a>
+                                          </div>                    
+
+                                          
+                                   </div>
+
+                                   <div class="card-body"> <!-- .card-boby -->
+                                          <h1 id="" class="h3">Buscador de Existencias</h1>                            <!--es decir será un H1 pero va a lucir                             como un h 3 y este caso el h1 le da digamos una posición en el SEO (Search Engine Optimization).-->
+                                   </div> 
+
+                            </div>
+
+
+                
+                            <div class="card">   <!--segunda será para colocar un formulario -->
+                                   <!--    .card-body 
+                                   el usuario luego va a querer insertar una nueva ciudad y para eso  vamos a crear 
+                                   un formulario entonces la segunda tarjeta será la encargada de hacer eso vamos a que lo
+                                   tenía un cargado y aquí adentro vamos a colocar ese
+               
+                                       form#w-form y borramos action="" (lo vamos hacer con JS)
+                                   -->
+               
+                                   <div class="card-body">
+                                       <form id="w-form">
+              
+                                          <div class="form-group">
+                                                 <input type="text"  id="estilo" class="form-control" placeholder="Indica el numero de estilo" autofocus>                                      
+                                          </div>
+              
+              
+                                           <div class="form-group">    <!-- .form-group  vamos a crear una 19:46 separación de forma group  -->
+                                                 
+                                               <button class="btn btn-success btn-block" id="w-change-btn">                
+                                                  Buscar Existencias
+                                               </button>
+                                           </div>
+               
+                                       </form>
+                                   </div>
+               
+                            </div>    
+                            
+
+
+
+                            
+                     </div>
+              </div>
+
+
+              
+       </div>
+
+
+    <!-- Sección para ir mostrando el resultado de las existencias -->
+    <div id="estilos-contenedor" class="container p-0 container-fluid" style="display:none" >
+       <div class="row">
+           <div class=" col-md-4   text-center mx-auto">
+
+              <div class="card">
+
+                     <button  id="w-regresa-btn" type="button" class="btn btn-secondary">Regresar</button>                       
+       
+              </div>
+            
+               <div class="card">
+                   <h3>Existencias del Estilo</h3>
+                  <h2>  <span  id="SG_ESTILO"  class="badge  badge-pill badge-success"></span> </h2>
+                   <span  id="SG_INFO"         class="badge  badge-pill badge-info"></span>
+                   <span  id="SG_TEMPORADA"    class="badge badge-pill badge-primary"></span>
+               </div>
+
+
+
+               <div class="card" id="tabla" >
+                     <div class="card-body" >
+                            
+
+
+                            <table class="table-condensed table-hover table-striped" id="firstTabOverall"  >
+
+                                   
+                                   <thead>
+                                                 <tr>
+                                                 <th scope="col">Color / Material</th>
+                                                 <th scope="col">Tienda</th>
+                                                 <th scope="col">Existen</th>
+                                                 </tr>
+                                   </thead> 
+
+                                   
+                                   <tbody>
+                                                 <tr class="table-success">
+                                                             </tr>                                          
+                                   </tbody>
+                            </table> 
+
+                     
+
+                     </div>
+
+              </div>
+
+           </div>
+           
+       </div>
+   </div>
+
+
+<script type="text/javascript" src="bundle.js"></script></body>
+
+
+       <footer>
+              <h2> ERP/PG2 <i>Copyright 2019 © </i> Carlo Rossetti. </h2>
+              
+       </footer>
+</html>
